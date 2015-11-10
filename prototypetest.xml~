@@ -1,0 +1,31 @@
+<prototype>
+	<plot name="bar">
+		<field name="xaxis">Categorical</field>
+		<field name="yaxis">Count</field>
+		<field name="metrics">Variance</field>
+	</plot>
+
+	<plot name="bar">
+		<field name="xaxis">Categorical</field>
+		<field name="yaxis">Numerical</field>
+		<field name="metrics">Variance</field>
+	</plot>
+
+	<plot name="density">
+		<field name="xaxis">Numerical</field>
+		<field name="yaxis">Density</field>
+		<field name="metrics">Variance</field>
+	</plot>
+
+	<plot name="scatter">
+		<field name="xaxis">Numerical</field>
+		<field name="yaxis">Numerical</field>
+		<field name="metrics">Correlation</field>
+	</plot>
+
+	<plot name="density">
+		<field name="xaxis">Numerical</field>
+		<field name="yaxis">count</field>
+		<field name="metrics">Variance</field>
+	</plot>
+</prototype>

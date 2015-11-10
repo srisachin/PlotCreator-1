@@ -1,0 +1,11 @@
+name,type
+ph,numerical
+alcohol,numerical
+quality,categorical
+country,categorical
+price,numerical
+rate,numerical
+year,numerical
+decade,categorical
+type,categorical
+

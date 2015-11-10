@@ -1,0 +1,5 @@
+xaxis,yaxis,plot
+categorical,count,barcount
+categorical,numerical,barmean
+numerical,prob,density
+numerical,numerical,scatter
