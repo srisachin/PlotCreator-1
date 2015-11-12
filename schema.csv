@@ -1,12 +1,7 @@
 name,type
-AGE,num
+GAGE,num
+BAGE,num
+GP,cat
+BP,cat
+AINCOME,num
 STATUS,cat
-EDUCATION,cat
-YEARS,num
-PROFESSION,cat
-CAPITALGAINS,num
-CAPITALLOSS,num
-HOURSPERWEEK,cat
-NATIVE,cat
-SALARYVALUE,num
-ZODIAK,cat

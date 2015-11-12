@@ -42,10 +42,10 @@ class Genplots:
 
 
 if __name__ == '__main__':	
-	myDataLoc='/home/sachin/Documents/forever/ZENSUS.csv';
+	myDataLoc='/home/sachin/Documents/forever/wine.csv';
 	myExp='/home/sachin/Documents/forever/experiment.csv';
 	settings.initData()
-	gen = Genplots(myData,myExp)
+	gen = Genplots(myDataLoc,myExp)
 	gen.generatePlots()
 
 # Input : data, experiments

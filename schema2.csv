@@ -1,7 +1,7 @@
 name,type
-FIRSTTEAM,categorical
-SECONDTEAM,categorical
-SCORE1,numerical
-SCORE2,numerical
-TICKETSSOLD,numerical
-DAY,categorical
+FIRSTTEAM,cat
+SECONDTEAM,cat
+SCORE1,num
+SCORE2,num
+TICKETSSOLD,num
+DAY,cat

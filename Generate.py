@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
 import pandas as pd
 class Generate:
-	def __init__(self):
-		self.schema = pd.DataFrame.from_csv('/home/sachin/Documents/forever/schema.csv',index_col=False);		
-		self.prototype = pd.DataFrame.from_csv('/home/sachin/Documents/forever/prototype.csv',index_col=False);
+	def __init__(self,mySchema,myPrototype):
+		self.schema = pd.DataFrame.from_csv(mySchema,index_col=False);		
+		self.prototype = pd.DataFrame.from_csv(myPrototype,index_col=False);
 	def generateExperiments(self):
 		exp1 = pd.merge(self.prototype, self.schema, left_on='xaxis', right_on='type', how='inner');
 		exp1['xaxis']=exp1['name'];
@@ -17,7 +17,9 @@ class Generate:
 		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
 
 if __name__ == '__main__':
-	gen = Generate()
+	mySchema = '/home/sachin/Documents/forever/schema1.csv'
+	myPrototype = '/home/sachin/Documents/forever/prototype.csv'
+	gen = Generate(mySchema,myPrototype)
 	gen.generateExperiments()
 
 
