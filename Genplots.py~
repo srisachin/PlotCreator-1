@@ -42,7 +42,7 @@ class Genplots:
 
 
 if __name__ == '__main__':	
-	myDataLoc='/home/sachin/Documents/forever/wine.csv';
+	myDataLoc='/home/sachin/Documents/forever/Marriage.csv';
 	myExp='/home/sachin/Documents/forever/experiment.csv';
 	settings.initData()
 	gen = Genplots(myDataLoc,myExp)

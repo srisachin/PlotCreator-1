@@ -17,7 +17,7 @@ class Generate:
 		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
 
 if __name__ == '__main__':
-	mySchema = '/home/sachin/Documents/forever/schema1.csv'
+	mySchema = '/home/sachin/Documents/forever/schemaZ.csv'
 	myPrototype = '/home/sachin/Documents/forever/prototype.csv'
 	gen = Generate(mySchema,myPrototype)
 	gen.generateExperiments()
