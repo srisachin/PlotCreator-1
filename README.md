@@ -1,7 +1,7 @@
-# forever-analytics - Copyright Sachin Srivastava. Please contact me sachinsri12345@gmail.com for using my code.
+# forever-analytics - Copyright Sachin Srivastava. Please contact me sachinsri12345@gmail.com for using this code.
 
 Forever Analytics
-This project is to auto generate plots and charts on a data in csv format. Still in development.
+This project is to auto generate plots and charts on a data in csv format. This project is still in development.
 
 The Generate.py is for generating the experiments. The arguments to pass are the schema and the prototypes. 
 Both are specified in .csv format. Please use prototype.csv and Schema?.csv provided.
