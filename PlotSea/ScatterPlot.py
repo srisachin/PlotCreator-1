@@ -1,14 +1,14 @@
-import PlotObj;
+# Copyright Sachin Srivastava
+
+import PlotSea.PlotObj;
 import seaborn as sns;
 import matplotlib.pyplot as plt
 import matplotlib
-import Genplots
 import pandas as pd
 import settings
 
 
-class ScatterPlot(PlotObj.PlotObj):
-#	def __init__(self,exp):
+class ScatterPlot(PlotSea.PlotObj.PlotObj):
 	def plotExp(self,exp,myData):
 		plt.figure();
 		sns.regplot(exp[1]['xaxis'],exp[1]['yaxis'],data=myData);

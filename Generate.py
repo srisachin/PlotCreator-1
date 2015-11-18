@@ -1,5 +1,9 @@
-import xml.etree.ElementTree as ET
+# Copyright Sachin Srivastava
+# Usage : python Generate.py <schema-filename> <prototype-filename>
+
 import pandas as pd
+import sys
+
 class Generate:
 	def __init__(self,mySchema,myPrototype):
 		self.schema = pd.DataFrame.from_csv(mySchema,index_col=False);		
@@ -16,12 +20,16 @@ class Generate:
 		exp=pd.concat([exp1[~idx], exp2])
 		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
 
-if __name__ == '__main__':
-	mySchema = '/home/sachin/Documents/forever/schemaZ.csv'
-	myPrototype = '/home/sachin/Documents/forever/prototype.csv'
+def main(argv):	
+	#mySchema = '/home/sachin/Documents/forever/schemaZ.csv'
+	#myPrototype = '/home/sachin/Documents/forever/prototype.csv'
+	mySchema=argv[0]
+	myPrototype=argv[1]
 	gen = Generate(mySchema,myPrototype)
 	gen.generateExperiments()
 
+if __name__ == '__main__':
+	main(sys.argv[1:])
 
 # Input : Schema, Plot Prototype
 # Output : Experiments

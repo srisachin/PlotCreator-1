@@ -1,4 +1,4 @@
-
+# Copyright Sachin Srivastava
 
 import matplotlib.pyplot as plt
 

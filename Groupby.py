@@ -1,5 +1,7 @@
+# Copyright Sachin Srivastava
 import pandas as pd
 import csv
+import sys
 
 class Groupby:
 	def __init__(self,myDataLoc,mySchema):	
@@ -23,9 +25,11 @@ class Groupby:
 				csv_out.writerow(row)
 		#print (z)
 
-
-if __name__ == '__main__':	
-	myDataLoc='/home/sachin/Documents/forever/ZENSUS.csv';
-	mySchema = '/home/sachin/Documents/forever/schema.csv';
+def main(argv):	
+	myDataLoc=argv[0]
+	mySchema=argv[1]
 	gb = Groupby(myDataLoc,mySchema)
 	gb.create()
+
+if __name__ == '__main__':	
+	main(sys.argv[1:])

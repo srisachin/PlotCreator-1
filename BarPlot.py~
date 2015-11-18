@@ -12,7 +12,7 @@ class BarPlot(PlotObj.PlotObj):
 	def plotExp(self,exp,myData):
 		plt.figure();
 #		print (exp[1]['xaxis'])
-		g=sns.countplot(settings.myData[exp[1]['xaxis']]);
+		g=sns.countplot(myData[exp[1]['xaxis']]);
 		plt.savefig("/home/sachin/Documents/forever/plots/%d.jpg" %settings.count);
 		plt.clf()
 		plt.close()
