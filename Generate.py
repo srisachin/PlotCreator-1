@@ -21,8 +21,6 @@ class Generate:
 		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
 
 def main(argv):	
-	#mySchema = '/home/sachin/Documents/forever/schemaZ.csv'
-	#myPrototype = '/home/sachin/Documents/forever/prototype.csv'
 	mySchema=argv[0]
 	myPrototype=argv[1]
 	gen = Generate(mySchema,myPrototype)

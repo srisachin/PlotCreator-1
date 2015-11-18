@@ -1,4 +1,6 @@
 # Copyright Sachin Srivastava
+# Usage : python Generate.py <schema-filename> <prototype-filename>
+
 import pandas as pd
 import sys
 
