@@ -12,7 +12,7 @@ class ScatterPlot(PlotSea.PlotObj.PlotObj):
 	def plotExp(self,exp,myData):
 		plt.figure();
 		sns.regplot(exp[1]['xaxis'],exp[1]['yaxis'],data=myData);
-		plt.savefig("/home/sachin/Documents/forever/plots/%d.png" %settings.count);
+		plt.savefig("plots/%d.png" %settings.count);
 		plt.clf()
 		plt.close()
 		settings.count=settings.count+1;

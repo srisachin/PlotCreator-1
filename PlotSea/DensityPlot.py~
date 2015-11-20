@@ -13,7 +13,7 @@ class DensityPlot(PlotSea.PlotObj.PlotObj):
 		plt.figure();
 		try:		
 			sns.kdeplot(myData[exp[1]['xaxis']]);		
-			plt.savefig("/home/sachin/Documents/forever/plots/%d.jpg" %settings.count);
+			plt.savefig("/home/sachin/Documents/forever/plots/%d.png" %settings.count);
 		except:
 			pass
 		plt.clf()
