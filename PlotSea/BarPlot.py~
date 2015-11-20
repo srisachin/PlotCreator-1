@@ -9,7 +9,6 @@ import settings
 
 
 class BarPlot(PlotSea.PlotObj.PlotObj):
-#	def __init__(self,exp):
 	def plotExp(self,exp,myData):
 		plt.figure();
 #		print (exp[1]['xaxis'])

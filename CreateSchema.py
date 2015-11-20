@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 
 def main(argv):	
-	myDataLoc=argv[0]	
+	myDataLoc=argv	
 	myData = pd.DataFrame.from_csv(myDataLoc,index_col=False,encoding = "ISO-8859-1");
 	var=list(myData.columns.values)
 	o = []
@@ -24,5 +24,5 @@ def main(argv):
 
 
 if __name__ == '__main__':	
-	main(sys.argv[1:])
+	main(sys.argv[1])
 

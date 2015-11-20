@@ -7,11 +7,8 @@ import settings
 
 
 class BarMean(PlotSea.PlotObj.PlotObj):
-#	def __init__(self,exp):
 	def plotExp(self,exp,myData):
 		plt.figure();
-#		print (exp[1]['xaxis'])
-#		g=sns.countplot(settings.myData[exp[1]['xaxis']]);
 		g=sns.barplot(x=exp[1]['xaxis'], y=exp[1]['yaxis'],data=myData.sort(exp[1]['xaxis']))
 		plt.savefig("/home/sachin/Documents/forever/plots/%d.jpg" %settings.count);
 		plt.clf()

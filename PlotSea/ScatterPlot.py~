@@ -9,7 +9,6 @@ import settings
 
 
 class ScatterPlot(PlotSea.PlotObj.PlotObj):
-#	def __init__(self,exp):
 	def plotExp(self,exp,myData):
 		plt.figure();
 		sns.regplot(exp[1]['xaxis'],exp[1]['yaxis'],data=myData);

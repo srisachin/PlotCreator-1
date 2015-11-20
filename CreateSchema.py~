@@ -18,11 +18,11 @@ def main(argv):
 
 	with open('Schema.csv','w') as out:
 		csv_out=csv.writer(out)
-		csv_out.writerow(['col','value'])
+		csv_out.writerow(['name','type'])
 		for row in o:
 			csv_out.writerow(row)
 
 
 if __name__ == '__main__':	
-	main(sys.argv[1:])
+	main(sys.argv[1])
 
