@@ -21,8 +21,8 @@ class Generate:
 		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
 
 def main(argv1,argv2):	
-	mySchema=argv[0]
-	myPrototype=argv[1]
+	mySchema=argv1
+	myPrototype=argv2
 	gen = Generate(mySchema,myPrototype)
 	gen.generateExperiments()
 

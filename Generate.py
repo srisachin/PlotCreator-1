@@ -18,7 +18,7 @@ class Generate:
 		exp2['yaxis']=exp2['name']
 		exp2 = exp2[['xaxis','yaxis', 'plot']]
 		exp=pd.concat([exp1[~idx], exp2])
-		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
+		exp.to_csv('experiment.csv')
 
 def main(argv1,argv2):	
 	mySchema=argv1
