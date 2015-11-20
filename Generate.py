@@ -20,14 +20,14 @@ class Generate:
 		exp=pd.concat([exp1[~idx], exp2])
 		exp.to_csv('/home/sachin/Documents/forever/experiment.csv')
 
-def main(argv):	
-	mySchema=argv[0]
-	myPrototype=argv[1]
+def main(argv1,argv2):	
+	mySchema=argv1
+	myPrototype=argv2
 	gen = Generate(mySchema,myPrototype)
 	gen.generateExperiments()
 
 if __name__ == '__main__':
-	main(sys.argv[1:])
+	main(sys.argv[1],sys.argv[2])
 
 # Input : Schema, Plot Prototype
 # Output : Experiments

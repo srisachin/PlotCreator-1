@@ -1,0 +1,5 @@
+python3 CreateSchema.py ZENSUS.csv
+python3 Generate.py Schema.csv prototype.csv
+python3 Groupby.py ZENSUS.csv Schema.csv
+python3 Genplots.py ZENSUS.csv experiment.csv
+

@@ -1,6 +1,8 @@
 # Copyright Sachin Srivastava
+# python3 Groupby.py ZENSUS.csv schemaZ.csv
 import pandas as pd
 import csv
+import sys
 
 class Groupby:
 	def __init__(self,myDataLoc,mySchema):	
@@ -31,4 +33,4 @@ def main(argv):
 	gb.create()
 
 if __name__ == '__main__':	
-	main(sys.argv[1:])
+	main(sys.argv[1],sys.argv[2])

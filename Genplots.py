@@ -10,10 +10,13 @@ from PlotSea import *
 
 class Genplots:
 
-	def __init__(self,myDataLoc,myExp):	
-		self.experiments = pd.DataFrame.from_csv(myExp,index_col=False);
-		self.myData = pd.DataFrame.from_csv(myDataLoc,index_col=False,encoding = "ISO-8859-1");
-		self.plotlist = []
+	def __init__(self,myDataLoc,myExp,cat=None,val=None):
+			self.experiments = pd.DataFrame.from_csv(myExp,index_col=False);
+			self.myData = pd.DataFrame.from_csv(myDataLoc,index_col=False,encoding = "ISO-8859-1");
+#			self.plotlist = []
+			if(cat!=None):
+				self.myData = self.myData[self.myData[cat]==val]
+			
 	
 	def myFactory(self,myStr,exp):
 		for cls in PlotSea.PlotObj.PlotObj.__subclasses__():
@@ -29,16 +32,21 @@ class Genplots:
 			p.plotExp(exp,self.myData)
 
 
-def main(argv):	
-	myDataLoc=argv[0]
-	myExp=argv[1]
+def main(argv1,argv2,argv3):	
+	myDataLoc=argv1
+	myExp=argv2
 	settings.initData()
 	gen = Genplots(myDataLoc,myExp)
 	gen.generatePlots()
-
+	
+	df=pd.DataFrame.from_csv(argv3,index_col=False);
+	for index, row in df.iterrows():
+		gen = Genplots(myDataLoc,myExp,row['col'],row['value'])
+		gen.generatePlots()
+		
 
 if __name__ == '__main__':	
-	main(sys.argv[1:])
+	main(sys.argv[1],sys.argv[2],sys.argv[3])
 
 # Input : data, experiments
 # Output : list of plots

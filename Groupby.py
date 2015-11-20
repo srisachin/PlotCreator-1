@@ -1,4 +1,5 @@
 # Copyright Sachin Srivastava
+# python3 Groupby.py ZENSUS.csv schemaZ.csv
 import pandas as pd
 import csv
 import sys
@@ -25,11 +26,11 @@ class Groupby:
 				csv_out.writerow(row)
 		#print (z)
 
-def main(argv):	
-	myDataLoc=argv[0]
-	mySchema=argv[1]
+def main(argv1,argv2):	
+	myDataLoc=argv1
+	mySchema=argv2
 	gb = Groupby(myDataLoc,mySchema)
 	gb.create()
 
 if __name__ == '__main__':	
-	main(sys.argv[1:])
+	main(sys.argv[1],sys.argv[2])
